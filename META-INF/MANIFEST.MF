@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: ScriptGen
+Class-Path: ScriptGen.jar
+Created-By: 1.7.0_06 (Oracle Corporation)
