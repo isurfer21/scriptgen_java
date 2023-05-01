@@ -37,7 +37,22 @@ cd scriptgen_java
 javac .\ScriptGen.java
 ```
 
-5. After running these commands, the executable binary can be found in the current directory with a name `ScriptGen.class`.
+5. After running these commands, the executable binary can be found in the current directory with a name `ScriptGen.class`. Run the command to see if it works.
+```
+java ScriptGen -h
+```
+
+### For Distribution
+
+6. We then create a _JAR_ file named `ScriptGen.jar` by entering the following command:
+```
+jar cfm .\ScriptGen.jar .\META-INF\MANIFEST.MF .\ScriptGen.class
+```
+
+7. After this, you can get the `ScriptGen.jar` file. Run the command to see if it works.
+```
+java -jar ScriptGen.jar -h
+```
 
 ## Usage
 
@@ -100,5 +115,9 @@ java ScriptGen java /path/to/MyClass
 Using the tool itself, you can easily create a short command for this tool. To do this, simply run the following command:
 ```
 java ScriptGen java ScriptGen
+```
+or 
+```
+java ScriptGen "java -jar" ScriptGen.jar
 ```
 Give it a try and see for yourself!
